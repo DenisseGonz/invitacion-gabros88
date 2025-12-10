@@ -1,0 +1,25 @@
+<p-card [style]="{ overflow: 'hidden' }" class="flex flex-wrap justify-content-center">
+    <ng-template #header>
+        <div class="flex justify-content-center mt-3">
+            <img
+                src="/gabriel-pic.jpg"
+                class="border-circle w-12rem h-12rem shadow-5"
+                alt="Gabriel"
+            />
+        </div>
+    </ng-template>
+    <ng-template #title> <span class="flex justify-content-center mt-3">🎮 Hey there, I’m Gabriel 👋</span> </ng-template>
+    <ng-template #subtitle> <span class="flex justify-content-center mt-1">Espero que se diviertan</span> </ng-template>
+    <p>
+        Hemos creado esta página de forma rápida para poder compartirles un poco de como estaremos manejando las reglas de los
+        eventos y actividades que tenemos planeados para mi fiesta. Ojalá sea de su agrado y el feedback es siempre agradecido.
+    </p>
+    <ng-template #footer>
+        <div class="flex gap-4 mt-1 justify-content-center">
+            <p-button icon="pi pi-github" [rounded]="true" severity="secondary" [outlined]="true"/>
+            <p-button icon="pi pi-linkedin" [rounded]="true" severity="secondary" [outlined]="true"/>
+            <p-button icon="pi pi-heart-fill" [rounded]="true" severity="secondary" [outlined]="true"/>
+        </div>
+    </ng-template>
+    
+</p-card>

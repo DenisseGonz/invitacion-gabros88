@@ -1,0 +1,14 @@
+<p-splitter [panelSizes]="[70, 30]" class="w-full h-full mt-3">
+    <ng-template #panel>
+        <div class="flex items-center justify-center w-full h-full">
+            <p-scrollpanel [style]="{ width: '100%', height: '80vh'}" >
+                <interes class="justify-content-center flex-row"></interes>
+            </p-scrollpanel>
+        </div>
+    </ng-template>
+    <ng-template #panel>
+        <div class="flex items-center justify-center h-full w-full">
+            <about-us class="flex flex-wrap justify-content-center"></about-us>
+        </div>
+    </ng-template>
+</p-splitter>

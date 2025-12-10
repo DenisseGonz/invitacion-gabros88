@@ -1,0 +1,19 @@
+<div class="card">
+    <p-menubar [model]="items">
+        <ng-template #start class="brand-logo" alt="logo" aria-hidden="true">
+            <i class="pi pi-crown" style="font-size: 2.5rem;"></i>
+        </ng-template>
+        <ng-template #item let-item let-root="root">
+            <a pRipple class="flex items-center px-4 py-3 cursor-pointer gap-2" pButton [rounded]="true" severity="secondary" [outlined]="true">
+                <span pButtonIcon class="{{item.icon}}"></span>
+                <span pButtonLabel>{{item.label}}</span>
+                <i *ngIf="item.items" [ngClass]="['ms-auto pi', root ? 'pi-angle-down' : 'pi-angle-right']"></i>
+            </a>
+        </ng-template>
+        <ng-template #end>
+            <div class="flex items-center gap-2">
+                <p-button [icon]="isDark ? 'pi pi-sun' : 'pi pi-moon'" [rounded]="true" severity="secondary" [outlined]="true" (click)="toggleDarkMode()"/>
+            </div>
+        </ng-template>
+    </p-menubar>
+</div>

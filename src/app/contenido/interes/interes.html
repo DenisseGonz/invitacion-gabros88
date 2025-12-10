@@ -1,0 +1,192 @@
+ <p-fieldset class="flex justify-items-center align-middle m-2 p-2">
+    <ng-template #header>
+        <div class="flex items-center gap-2 p-0">
+            <img src="/banner-itinerario.gif" alt="banner" height="100" />
+        </div>
+    </ng-template>
+    <h2>¡🎊Tenemos organizadas muchas sorpresas para ustedes🎈🎉!</h2>
+    <p class="m-0 w-full">
+    Te compartimos las actividades y horarios que estan planeadas. Hay posibilidad
+    de cambios de último momento, pero esta es la intención. ¡Sigue deslizando para más información!
+    ¡Si quieres agregar tu música, entra aquí! 
+    <a href="https://open.spotify.com/playlist/1vLjZJ3TAWBEPIYib9xlxA?si=e6283a323f0045e3&pt=560129995c4cfb1505084ba6b886b443" pButton [rounded]="true" [raised]="true" severity="help" icon="pi pi-wave-pulse"></a>
+    </p>
+    <p-scrollpanel [style]="{ width: '100%', height: '40vh'}" >
+    <p-timeline [value]="events" align="alternate" class="customized-timeline my-2">
+    <ng-template #marker let-event>
+        <span class="flex w-12 h-12 items-center justify-center text-white z-10 shadow-sm">
+            <p-button icon={{event.icon}} [rounded]="true" [text]="true" [raised]="true" [severity]="event.severity"></p-button>
+        </span>
+    </ng-template>
+    <ng-template #content let-event>
+        <om-shine-border>
+            <p-card> 
+                <ng-template #title class="-m-5"><om-typewriter [words]="[event.status]"></om-typewriter></ng-template>
+                <ng-template #subtitle class="-m-5">{{event.date}}</ng-template>
+                <p>{{event.text}}</p>
+            </p-card>
+        </om-shine-border>
+    </ng-template>
+</p-timeline>
+</p-scrollpanel>
+</p-fieldset>
+<p-fieldset class="flex justify-items-center m-2 p-2">
+    <ng-template #header>
+        <div class="flex items-center gap-2 p-0">
+            <img src="/banner-toneos.gif" alt="banner" height="100" />
+        </div>
+    </ng-template>
+    <h2>Tenemos organizados 2 torneos:</h2>
+    <ul>
+        <li><span class="pi pi-dollar"></span> Torneo con aportación voluntaria ($100 MXN)</li>
+        <li><span class="pi pi-gift"></span> Torneo libre</li>
+    </ul>
+    <p class="m-0 w-full">
+    En ambos se jugarán juegos de mesa como videojuegos para hacer más dinámica la actividad al 
+    explorar distintas habilidades como lo son <i>la estrategia, la destreza, la precisión y la rapidez.</i>
+    </p>
+    <ul>
+        <li>Si deseas inscribirte, dirigete al siguiente formulario 
+            <a href="https://forms.gle/mZgei9RMsAXm8tvd6" pButton [rounded]="true" [raised]="true" severity="help" icon="pi pi-book"></a></li>
+        <li>Si eres jugador, entra aquí</li>
+        <li>Si eres juez, entra aquí</li>
+        <li>Si quieres ver el marcador, entra aquí</li>
+    </ul>
+    <h3>¡Únete!</h3>
+</p-fieldset>
+ <p-fieldset class="flex justify-items-center m-2 p-2">
+    <ng-template #header>
+        <div class="flex items-center gap-2 p-0">
+            <img src="/banner-actividades.gif" alt="banner" height="100" />
+        </div>
+    </ng-template>
+    <h2>Tenemos organizados 4 eventos especiales:</h2>
+    <ul>
+        <li><span class="pi pi-headphones"></span> Concurso músical</li>
+        <li><span class="pi pi-google"></span> Concurso de Google</li>
+        <li><span class="pi pi-book"></span> Trivia</li>
+        <li><span class="pi pi-user-plus"></span> Hay que subirle el ego al cumpleañero</li>
+    </ul>
+    <p class="m-0 w-full">
+    Te dejamos información de los mismos:
+    </p>
+    <p-tabs value="0" class="my-1">
+    <p-tablist>
+        <p-tab value="0"><span class="pi pi-headphones"> Concurso músical</span></p-tab>
+        <p-tab value="1"><span class="pi pi-google"></span> Concurso de Google</p-tab>
+        <p-tab value="2"><span class="pi pi-book"></span> Trivia</p-tab>
+        <p-tab value="3"><span class="pi pi-user-plus"></span> Cumpleañero</p-tab>
+    </p-tablist>
+    <p-tabpanels>
+        <p-tabpanel value="0">
+            <p class="m-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+        </p-tabpanel>
+        <p-tabpanel value="1">
+            <p class="m-0">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius
+                modi.
+            </p>
+        </p-tabpanel>
+        <p-tabpanel value="2">
+            <p class="m-0">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+                sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
+                facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                impedit quo minus.
+            </p>
+        </p-tabpanel>
+        <p-tabpanel value="3">
+            <p class="m-0">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+                sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
+                facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                impedit quo minus.
+            </p>
+        </p-tabpanel>
+    </p-tabpanels>
+</p-tabs>
+</p-fieldset>
+<p-fieldset class="flex justify-items-center m-2 p-2">
+    <ng-template #header>
+        <div class="flex items-center gap-2 p-0">
+            <img src="/banner-comida.gif" alt="banner" height="100" />
+        </div>
+    </ng-template>
+    <h2>Habrán 2 opciones de comida oriental:</h2>
+    <div class="flex flex-col md:flex-row text-center w-full">
+        <om-shine-border>
+        <p-card class="w-full align-middle justify-items-center py-5 flex-col">
+            <ng-template #header>
+                <img src="/yakisoba.jpg" alt="Yakisoba" height="200px" class="border-circle w-12rem h-12rem shadow-5" >
+            </ng-template>
+            <ng-template #title>Yakisoba</ng-template>
+            <ng-template #subtitle>
+                <span class="pi pi-star-fill"></span>
+                <span class="pi pi-star-fill"></span>
+                <span class="pi pi-star-fill"></span>
+                <span class="pi pi-star-fill"></span>
+                <span class="pi pi-star-fill"></span>
+            </ng-template>
+            <p-divider type="dashed" />
+            <p>Los fideos yakisoba son un plato japonés tradicional popular y querido, 
+                conocido por su deliciosa combinación de fideos, verduras y salsa. Lleva los siguientes ingredientes:</p>
+                <ul>
+                    <li>Fideos yakisoba</li>
+                    <li>Salsa de soja</li>
+                    <li>Salsa Yakisoba</li>
+                    <li>Sake</li>
+                    <li>Ración de proteínas (pollo, cerdo y ternera) (opcional)</li>
+                    <li>Col picada</li>
+                    <li>Zanahoria</li>
+                    <li>Brocoli</li>
+                    <li>Cebolla</li>
+                </ul>
+        </p-card>
+        </om-shine-border>
+        <div class="w-full">
+            <p-divider layout="vertical" class="hidden! md:!flex"><b>OR</b></p-divider>
+        </div>
+        <om-shine-border>
+        <p-card class="w-full items-center justify-center py-5 flex-col">
+            <ng-template #header>
+                <img src="/Gyudon.jpg" alt="Gyudon" height="200px" class="border-circle w-12rem h-12rem shadow-5" >
+            </ng-template>
+            <ng-template #title>Gyudon</ng-template>
+            <ng-template #subtitle>
+                <span class="pi pi-star-fill"></span>
+                <span class="pi pi-star-fill"></span>
+                <span class="pi pi-star-fill"></span>
+                <span class="pi pi-star-fill"></span>
+                <span class="pi pi-star-fill"></span>
+            </ng-template>
+            <p-divider type="dashed" />
+            <p>
+                El nombre del plato expresa fielmente de qué se trata. 
+                Gyu significa «vaca» y hace referencia a su proteína principal, 
+                mientras que don es la versión corta de donburi, un cuenco de arroz con alguna proteína por encima.
+                Lleva los siguientes ingredientes:
+            </p>
+            <ul>
+                    <li>Carne de res cortada en tiras finas</li>
+                    <li>Arroz</li>
+                    <li>Sake</li>
+                    <li>Salsa de soja</li>
+                    <li>Tallo de cebollin (opcional)</li>
+                    <li>Queso (opcional)</li>
+                    <li>Salsa macha (opcional)</li>
+                </ul>
+        </p-card>
+        </om-shine-border>
+    </div>
+</p-fieldset>
