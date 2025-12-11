@@ -1,13 +1,8 @@
 <div class="card">
     <p-menubar [model]="items">
-        <ng-template #start class="brand-logo" alt="logo" aria-hidden="true">
-            <i class="pi pi-crown" style="font-size: 2.5rem;"></i>
-        </ng-template>
-        <ng-template #item let-item let-root="root">
-            <a pRipple class="flex items-center px-4 py-3 cursor-pointer gap-2" pButton [rounded]="true" severity="secondary" [outlined]="true">
-                <span pButtonIcon class="{{item.icon}}"></span>
-                <span pButtonLabel>{{item.label}}</span>
-                <i *ngIf="item.items" [ngClass]="['ms-auto pi', root ? 'pi-angle-down' : 'pi-angle-right']"></i>
+        <ng-template #start aria-hidden="true">
+            <a [routerLink]="['/']" rel="noopener noreferrer" pButton [rounded]="true" [text]="true" [raised]="true" severity="help">
+                <img [src]="isDark ? '/smash-white.png' : '/Smash_Ball_black.png'" alt="logo" width="50px">
             </a>
         </ng-template>
         <ng-template #end>
